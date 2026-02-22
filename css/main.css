@@ -1,0 +1,73 @@
+.container-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Grey800);
+    padding: 1.5rem;
+    width: clamp(300px, 88vw, 380px);
+    border-radius: 10px;
+}
+
+.container-card p{
+    margin: 1.8rem 0 1.5rem 0;
+    font-size: var(--paragraph-size);
+    text-align: center;
+}
+
+.profile-img{
+    width: 87px;
+    height: 87px;
+    border-radius: 60px;
+    margin-bottom: 1rem;
+}
+
+.info-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.info-section h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.info-section span{
+    font-size: var(--paragraph-size);
+    font-weight: 500;
+    color: var(--Green);
+}
+
+.btn-sections{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.btn-sections a{
+    font-size: var(--paragraph-size);
+    text-align: center;
+    padding: 0.813rem 0;
+    background-color: var(--Grey700);
+    color: var(--White);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    width: clamp(250px, 100%, 302px);
+}
+
+.btn-sections a:hover{
+    color: var(--Grey900);
+    background-color: var(--Green);
+}
+
+@media screen and (min-width: 1280px) {
+    .container-card{
+        padding: 2.25rem 1.5rem;
+    }
+}

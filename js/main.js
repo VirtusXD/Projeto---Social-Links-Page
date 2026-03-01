@@ -2,7 +2,7 @@ const simpleCardBtn = document.querySelector('.simple-card-btn')
 const socialCardBtn = document.querySelector('.social-card-btn')
 
 const modal = document.querySelector('dialog')
-const closeModal = document.querySelector('.return-modal')
+const closeModal = document.querySelector('.btn-return-modal')
 const openModal = document.querySelector('.delivery-section')
 
 function Hidden(){

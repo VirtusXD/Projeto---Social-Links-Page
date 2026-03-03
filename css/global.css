@@ -1,0 +1,139 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+html{
+  font-size: 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+ul{
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+:root[data-contexto="simple-card"] {
+    --Green: hsl(75, 94%, 57%);
+    --paragraph-color: hsl(0, 0%, 100%);
+
+    --button-bg-color: hsl(0, 0%, 20%);
+    --container-bg-color: hsl(0, 0%, 12%);
+    --main-bg-color: hsl(0, 0%, 8%);
+
+    --main-font: "Inter";
+    --paragraph-size: 0.875rem;
+    --body-align: center;
+}
+
+:root[data-contexto="social-card"] {
+    --paragraph-color: hsl(0, 0%, 0%);
+    --Black: rgb(0, 0, 0);
+    --variable-black: rgba(0, 0, 0, 0.514);
+
+    --button-bg-color: #FF6060;
+    --tag-bg-color: hsla(359, 100%, 78%, 0.671);
+    --container-bg-color: #F5F5F5;
+    --main-bg-color: #FBEDED;
+
+    --main-font: "Inter";
+    --paragraph-size: 0.875rem;
+    --body-align: start;
+}
+
+body{
+    font-family: var(--main-font);
+    background-color: var(--main-bg-color);
+    color: var(--paragraph-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: var(--body-align);
+    justify-content: var(--body-align);
+}
+
+.section-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.hidden{
+  display: none;
+}
+
+dialog::backdrop{
+  background-color: rgb(0 0 0 / .7);
+}
+
+
+@media screen and (min-width: 768px) {
+  .container-cardthemes {
+    width: 35px;
+    height: 300px;
+    position: absolute;
+    right: 0;
+    bottom: 35%;
+    background-color: #393939;
+    border-start-start-radius: 25px;
+    border-end-start-radius: 25px;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .change-card {
+    width: 30px;
+    height: 30px;
+    border-radius: 60px;
+    cursor: pointer;
+  }
+
+  .social-card-btn {
+    background-color: #f58989
+  }
+}

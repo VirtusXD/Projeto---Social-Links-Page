@@ -84,7 +84,7 @@ body{
     min-height: 100vh;
     display: flex;
     align-items: var(--body-align);
-    justify-content: center;
+    justify-content: var(--body-align);
 }
 
 .section-card{

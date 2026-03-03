@@ -1,130 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" data-contexto="social-card">
+
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta name="description" content="Perfil social de Jessica Randall, desenvolvedora front-end de Londres. Acesse seus links profissionais, projetos e redes sociais em um só lugar.">
-    <meta property="og:title" content="Jessica Randall | Desenvolvedora Front-end e Links Sociais">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="<meta name="description" content="Escolha o card ideal para sua jornada. Selecione o tema desejado e visualize conteúdos personalizados na próxima tela de forma dinâmica e interativa.">
+    <meta property="og:title" content="Escolha Seu Card | Experiência Personalizada">
+    <!-- Linking SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Linking SwiperJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/home.css">
     <script src="js/main.js" defer></script>
-    <title>Jessica Randall | Desenvolvedora Front-end em Londres | Links e Portfólio</title>
+    <title>Selecione um Card | Personalize Sua Experiência</title>
 </head>
 
 <body>
-    <main>
-        <div class="container-cardthemes">
-            <button class="change-card simple-card-btn"></button>
-            <button class="change-card social-card-btn"></button>
-        </div>
-        <section class="section-card simple-card hidden">
-            <img class="profile-img" src="/assets/avatar-jessica.jpeg" alt="Foto de perfil">
-            <div class="personal-section personal-simplecard">
-                <h1>Jessica Randall</h1>
-                <span>London, United Kingdom</span>
-            </div>
-            <p>"Front-end developer and avid reader."</p>
-            <div class="btn-sections">
-                <a href="#">GitHub</a>
-                <a href="#">Frontend Mentor</a>
-                <a href="#">Linkedin</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-        </section>
 
-        <section class="section-card social-card">
-        
-            <div class="container-hero">
-                <img class="hero-bg-social" src="assets/social-card-bg.png" alt="">
-        
-                <div class="profile-img-social">
-                    <img src="assets/avatar-laura.png" alt="Confeiteira sorrindo">
+    <main class="container swiper">
+
+        <section class="slider-wrapper">
+
+            <div class="swiper-wrapper">
+
+                <div class="card-item swiper-slide">
+                    <h2>Simple Card</h2>
+                    <img src="" alt="Simple Card image" class="cards-image">
+                    <button data-contexto="simple-card" class="simple-card-btn demo-button">Veja a demonstração</button>
                 </div>
-            </div>
-        
-            <div class="personal-section personal-socialcard">
-                <h1>Jessica Randall</h1>
-                <span>confeiteira</span>
-            </div>
-            <hr>
 
-            <div class="description-section">
-                <p>Confeiteira apaixonada por transformar celebrações em momentos doces e inesquecíveis. Produzo bolos artesanais personalizados, feitos com ingredientes selecionados e muito carinho.</p>
+                <div class="card-item swiper-slide">
+                    <h2>Social Card</h2>
+                    <img src="" alt="User Card image" class="cards-image">
+                    <button data-contexto="social-card" class="social-card-btn demo-button">Veja a demonstração</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <h2>Tech Card</h2>
+                    <img src="" alt="Tech Card image" class="cards-image">
+                    <button data-contexto="tech-card" class="tech-card-btn demo-button">Veja a demonstração</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <h2>Comporative Card</h2>
+                    <img src="" alt="Corporative Card image" class="cards-image">
+                    <button data-contexto="corporative-card" class="corporative-card-btn demo-button">Veja a demonstração</button>
+                </div>
+
             </div>
 
-            <article class="info-article">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
 
-                <div class="containers-article skill-section">
-                    <h2 class="title-sections">Especialidades</h2>
-                    <div class="skill-rows">
-                        <span>Bolos Personalizados e Doces</span>
-                        <span>Festas & Aniversários</span>
-                        <span>Criatividade e Inovação</span>
-                        <span>Decoração e Finalização</span>
-                    </div>
-                </div>
-
-                <div class="images-section">
-                    <img class="img-1" src="assets/social-card-figure1.png" alt="">
-                    <img class="img-2" src="assets/social-card-figure2.png" alt="">
-                    <img class="img-3" src="assets/social-card-figure3.png" alt="">
-                </div>
-
-                <div class="containers-article delivery-section">
-                    <div class="delivery-div">
-                        <img src="assets/delivery-icon-socialcard.png" alt="">
-                        <p>Informações do Delivery</p>
-                    </div>
-                    <a href="#">></a>
-                </div>
-
-                <dialog id="dialog">
-                    <div class="btn-return-modal">
-                        <img src="assets/close.png" alt="">
-                    </div>
-                    <div class="dialog-row">
-                        <h2>Horário de Funcionamento</h2>
-                        <h3>Segunda à Sexta-feira</h3>
-                        <p>12:00 - 20:00h</p>
-                    </div>
-                    <hr>
-                    <div class="dialog-row">
-                        <h2>Endereço</h2>
-                        <p>R. Rosalina de Siqueira, Jacareí - SP, 12308-690</p>
-                    </div>
-                </dialog>
-
-                <div class="contact-section">
-                    <h2 class="title-sections" >Entre em contato</h2>
-                    <div class="contact-row">
-                        <img src="/assets/phone-icon-socialcard.png" alt="">
-                        <p>laura.martins@mail.com</p>
-                    </div>
-                    <div class="contact-row">
-                        <img src="/assets/mail-icon-socialcard.png" alt="">
-                        <p>12 9999-9999</p>
-                    </div>
-                    <div class="contact-row">
-                        <img src="/assets/location-icon-socialcard.png" alt="">
-                        <p>Jacarei - SP</p>
-                    </div>
-                </div>
-                <div class="social-section">
-                    <h2 class="title-sections">Social Links</h2>
-                    <div class="social-row">
-                        <img src="assets/instagram.png" alt="">
-                        <img src="assets/facebook.png" alt="">
-                        <img src="assets/video.png" alt="">
-                    </div>
-                </div>
-
-            </article>
-            
         </section>
 
     </main>

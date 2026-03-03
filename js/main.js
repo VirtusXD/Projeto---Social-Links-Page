@@ -1,33 +1,39 @@
-const simpleCardBtn = document.querySelector('.simple-card-btn')
-const socialCardBtn = document.querySelector('.social-card-btn')
+const homeButtons = document.querySelectorAll('.demo-button')
 
-const modal = document.querySelector('dialog')
-const closeModal = document.querySelector('.btn-return-modal')
-const openModal = document.querySelector('.delivery-section')
-
-function Hidden(){
-    document.querySelectorAll('.section-card').forEach(el =>{
-        el.classList.add('hidden')
+homeButtons.forEach(homeBtn => {
+    homeBtn.addEventListener('click', ()=>{
+        const contexto = homeBtn.dataset.contexto
+        window.location.href = `cardspage.html?contexto=${contexto}`;
     })
-}
-
-simpleCardBtn.addEventListener('click', ()=>{
-    document.querySelector('html').setAttribute('data-contexto','simple-card')
-    Hidden()
-    document.querySelector('.simple-card').classList.remove('hidden')
 })
 
-socialCardBtn.addEventListener('click', ()=>{
-    document.querySelector('html').setAttribute('data-contexto','social-card')
-    Hidden()
-    document.querySelector('.social-card').classList.remove('hidden')
-})
+//Swiper API section
 
-
-openModal.addEventListener('click', ()=>{
-    modal.showModal();
-})
-
-closeModal.addEventListener('click', ()=>{
-    modal.close();
-})
+const swiper = new Swiper('.slider-wrapper', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 30,
+  // Pagination bullets
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    }
+  }
+});

@@ -3,7 +3,7 @@
     padding: 1.5rem 0;
     width: 100vw;
     border-radius: 10px;
-    max-width: 460px;
+    max-width: 480px;
 }
 
 .social-card hr{
@@ -11,7 +11,7 @@
     width: 85%;
 }
 
-.container-hero {
+.section-hero {
   position: relative;
   margin-bottom: 70px;
 }
@@ -20,6 +20,7 @@
     height: clamp(180px,53vw,250px);
     width:93vw;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .profile-img-social{
@@ -65,6 +66,7 @@
     flex-direction: column;
     gap: 1.2rem;
     width: clamp(300px,92vw,410px);
+    margin-top: 1rem;
 }
 
 .containers-article{
@@ -93,8 +95,10 @@
 }
 
 .skill-section h2{
+    position: relative;
     margin-bottom: 8px;
 }
+
 
 .skill-section span{
     font-size: var(--paragraph-size);
@@ -216,6 +220,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 6rem;
 }
 
 .social-row{
@@ -235,13 +240,28 @@
     transform: scale(1.1);
 }
 
+.footer-socialcard p{
+    text-align: center;
+}
+
 @media screen and (min-width: 460px) {
     .social-card{
-        margin-top: 3rem;
+        margin: 3rem 0;
         padding: 0 0 5rem;
     }
 
     .hero-bg-social{
         border-radius: 10px 10px 0 0;
     }
+
+    .skill-section h2::after {
+    content: "";
+    width: 230px;
+    height: 1px;
+    position:absolute;
+    background-color: #00000069;
+    top: 13px;
+    right: 5px;
+}
+
 }
